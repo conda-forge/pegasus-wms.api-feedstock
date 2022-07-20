@@ -20,7 +20,7 @@ requirements:
     - python >=3.5
     - setuptools
   run:
-    - pegasus-wms.common <5.2
+    - pegasus-wms.common
     - python >=3.5
 
 test:
