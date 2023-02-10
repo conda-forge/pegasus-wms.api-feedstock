@@ -17,11 +17,11 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.5
+    - python >=3.6
     - setuptools
   run:
     - pegasus-wms.common
-    - python >=3.5
+    - python >=3.6
 
 test:
   requires:
@@ -29,7 +29,9 @@ test:
   imports:
     - Pegasus.api
   commands:
-    - python -m pip check
+    # check metadata
+    - python -m pip check pegasus-wms.api
+    - python -m pip show pegasus-wms.api
 
 about:
   home: https://pegasus.isi.edu
