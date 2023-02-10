@@ -1,5 +1,5 @@
 {% set name = "pegasus-wms.api" %}
-{% set version = "5.0.3" %}
+{% set version = "5.0.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 4e4985736fe4fce2c3d5d10c58eeb684c78b777be1725220fccc8be9a7fe8307
+  sha256: 33d77fbc3b52f7cceb0a7bab4003daca9bac86b355ae2e21cb437dab20206686
 
 build:
   noarch: python
@@ -17,11 +17,11 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.5
+    - python >=3.6
     - setuptools
   run:
     - pegasus-wms.common
-    - python >=3.5
+    - python >=3.6
 
 test:
   requires:
@@ -29,7 +29,9 @@ test:
   imports:
     - Pegasus.api
   commands:
-    - python -m pip check
+    # check metadata
+    - python -m pip check pegasus-wms.api
+    - python -m pip show pegasus-wms.api
 
 about:
   home: https://pegasus.isi.edu
