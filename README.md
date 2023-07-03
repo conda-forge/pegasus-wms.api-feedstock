@@ -1,11 +1,11 @@
-About pegasus-wms.api
-=====================
+About pegasus-wms.api-feedstock
+===============================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pegasus-wms.api-feedstock/blob/main/LICENSE.txt)
 
 Home: https://pegasus.isi.edu
 
 Package license: Apache-2.0
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pegasus-wms.api-feedstock/blob/main/LICENSE.txt)
 
 Summary: Pegasus Workflow Management System Python API
 
