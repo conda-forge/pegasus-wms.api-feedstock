@@ -18,7 +18,8 @@ requirements:
   host:
     - pip
     - python >=3.6
-    - setuptools
+    - setuptools <69
+    - wheel
   run:
     - pegasus-wms.common
     - python >=3.6
@@ -30,7 +31,7 @@ test:
     - Pegasus.api
   commands:
     # check metadata
-    - python -m pip check pegasus-wms.api
+    - python -m pip check
     - python -m pip show pegasus-wms.api
 
 about:
