@@ -24,7 +24,7 @@ requirements:
     - setuptools
     - wheel
   run:
-    - pegasus-wms.common
+    - pegasus-wms.common >=5.1.0
     - python >=${{ python_min }}
 
 tests:
